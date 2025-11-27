@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Js</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="js/bundle.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <div class="menu-site-link">
+        <a class="site-link" href="#">
+          <span class="site-logo"><img src="images/logo_icon.png" width="70px"/></span>
+          <span class="site-title">Title</span>
+        </a>
+      </div>
+      <button class="menu-toggle hidden">
+        <div class="icon">☰</div>
+        <div class="text hidden">Open the Menu</div>
+      </button>
+      <div class="menu-wrapper">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <button class="menu-link a">
+              <div class="text">● Inner</div>
+              <div class="direction-indicator">▲</div>
+            </button>
+            <div class="innerList nestedLevel1 hidden a">
+              <ul class="inner-menu-list">
+                <li class="nested-menu-item" data-level="1"><a class="sub-menu-link" href="#">⨀ link Z</a></li>
+                <li class="nested-menu-item" data-level="1"><a class="sub-menu-link" href="#">⨀ link C</a></li>
+                <li class="nested-menu-item" data-level="2">
+                  <div class="innerList nestedLevel2 hidden">
+                    <ul class="inner-menu-list">
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link A</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                    </ul>
+                  </div>
+                </li>  
+                <li class="nested-menu-item" data-link-destination="lvl2"><a class="sub-menu-link" href="#">▶ link A</a></li>
+              </ul>
+            </div> 
+          </li>
+          <li class="menu-item">
+            <button class="menu-link b">
+              <div class="text">● Link 2</div>
+              <div class="direction-indicator">▲</div>
+            </button>
+            <div class="innerList nestedLevel1 hidden b">
+              <ul class="inner-menu-list">
+                <li class="nested-menu-item" data-level="1"><a class="sub-menu-link" href="#">⨀ link Y</a></li>
+                <li class="nested-menu-item" data-level="1"><a class="sub-menu-link" href="#">⨀ link U</a></li>
+                <li class="nested-menu-item" data-level="2">
+                  <div class="innerList nestedLevel2 a hidden">
+                    <ul class="inner-menu-list">
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link B</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                    </ul>
+                  </div>
+                </li>  
+                <li class="nested-menu-item" data-link-destination="lvl2"><a class="sub-menu-link" href="#">⨀ link A</a></li>
+                <li class="nested-menu-item" data-level="2">
+                  <div class="innerList nestedLevel2 b hidden">
+                    <ul class="inner-menu-list">
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link Z</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link X</a></li>
+                    </ul>
+                  </div>
+                </li>  
+                <li class="nested-menu-item" data-link-destination="lvl2"><a class="sub-menu-link" href="#">⨀ link A</a></li>
+                <li class="nested-menu-item" data-level="2">
+                  <div class="innerList nestedLevel2 c hidden">
+                    <ul class="inner-menu-list">
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link Z</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link X</a></li>
+                    </ul>
+                  </div>
+                </li>  
+                <li class="nested-menu-item" data-link-destination="lvl2"><a class="sub-menu-link" href="#">⨀ link A</a></li>
+              </ul>
+            </div> 
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#">■ Link 3</a>
+          </li>
+          <li class="menu-item">
+            <button class="menu-link">
+              <div class="text">● Inner</div>
+              <div class="direction-indicator">▲</div>
+            </button>
+            <div class="innerList nestedLevel1 hidden">
+              <ul class="inner-menu-list">
+                <li class="nested-menu-item" data-level="2">
+                  <div class="innerList nestedLevel2 hidden">
+                    <ul class="inner-menu-list">
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link A</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                    </ul>
+                  </div>
+                </li>  
+                <li class="nested-menu-item" data-link-destination="lvl2"><a class="sub-menu-link" href="#">⨀ link A</a></li>
+                <li class="nested-menu-item" data-level="1"><a class="sub-menu-link" href="#">⨀ link Z</a></li>
+                <li class="nested-menu-item" data-level="1"><a class="sub-menu-link" href="#">⨀ link C</a></li>
+              </ul>
+            </div> 
+          </li>
+        <li class="menu-item">
+            <button class="menu-link d">
+              <div class="text">● Inner</div>
+              <div class="direction-indicator">▲</div>
+            </button>
+            <div class="innerList nestedLevel1 hidden">
+              <ul class="inner-menu-list">
+                <li class="nested-menu-item" data-level="1"><a class="sub-menu-link" href="#">⨀ link Z</a></li>
+                <li class="nested-menu-item" data-level="1"><a class="sub-menu-link" href="#">⨀ link C</a></li>
+                <li class="nested-menu-item" data-level="2">
+                  <div class="innerList nestedLevel2 hidden">
+                    <ul class="inner-menu-list">
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link A</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                    </ul>
+                  </div>
+                </li>  
+                <li class="nested-menu-item" data-link-destination="lvl2"><a class="sub-menu-link" href="#">⨀ link A</a></li>
+              </ul>
+            </div> 
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div style="background-color: red; height: 50px;">dskjqhqdksjhdsqjksqlksdqjsqdlk</div>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>

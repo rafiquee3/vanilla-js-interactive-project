@@ -1,0 +1,240 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+    --nav-bgcolor: #1A1D24;
+    --nav-txtcolor: aliceblue;
+    --bg-color: #202124;
+    --sub-menu-link-color: black;
+    --nav-transition-timing: 0.5s;
+    --font-size: 16px;
+    --menu-height: 90px;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-size: var(--font-size);
+}
+.menu {
+    background-color: var(--nav-bgcolor);
+    font-family: Monaco;
+    height: var(--menu-height);
+    display: flex;
+    .menu-site-link {       
+        width: 30%;
+        align-self: center;
+        justify-items: center;
+        
+        .site-link {
+            display: flex;
+            align-items: center;
+            font-size: 2.2em;
+            color: var(--nav-txtcolor);
+            text-decoration: none;
+            gap: 0.3em;
+            cursor: pointer;
+            letter-spacing: 0.7vw;
+        }
+    }
+    button.menu-toggle {
+      display: none;
+      img {
+        width: 40px;
+      }
+    }
+
+    .menu-list a:not(.sub-menu-link) {
+        display: block;
+        height: fit-content;
+        color: var(--nav-txtcolor);
+        text-decoration: none;
+        line-height: var(--menu-height);         
+        padding: 0 2vw;      
+    } 
+
+    .menu-wrapper {
+        width: 70%;
+        height: 100%;
+        float: inline-start;
+    }
+    
+    .menu-list {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        height: 100%;
+
+        .menu-item {
+            float: inline-start;
+            position: relative;
+            height: 100%;
+        }
+        
+        & > .menu-item:hover {
+            box-shadow: inset 0px -2px 0px red
+        }
+        .direction-indicator, .text {
+          pointer-events: none;
+        }
+        button.menu-link {
+            height: 100%;    
+            padding: 0 2vw;
+            border: none;
+            background-color: var(--nav-bgcolor);
+            color: var(--nav-txtcolor);
+            z-index: 999;
+            div {
+                float: inline-start;
+            }
+
+            div:first-child {
+                margin-right: 1em;
+            }
+
+            &:hover {
+                color: red;
+            } 
+        }
+    
+        .innerList {
+            position: absolute;
+            top: 100%;
+            background-color: #6BA9B4;
+            margin-left: 2vw;
+            white-space: nowrap;
+            text-align: center;
+
+            .inner-menu-list {
+                list-style: none;
+                padding: 0;
+            }
+
+            .nested-menu-item {
+                position: relative;
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+
+            .sub-menu-link {
+                display: inline-block;
+                width: 100%;
+                position: relative;
+                border-bottom: 1px solid var(--bg-color);
+                border-right: 1px solid var(--bg-color);
+                padding: 1.3vw 3.5vw;
+                text-decoration: none;
+                color: var(--sub-menu-link-color);
+                .direction-indicator {
+                  float: left;
+                }
+            }
+
+            .sub-menu-link:hover {
+                font-weight: bolder;
+            }
+        }
+
+        .nestedLevel2 {
+          margin: 0;  
+          top: calc(-25px - 2*1.3vw);
+          left: 100%;
+          background-color: #7CACB4;
+        }
+    }
+    .hidden {
+        display: none;
+    }
+    .rotateBefore {
+        transform: rotate(180deg);
+        transition: var(--nav-transition-timing);
+    }
+    .rotateAfter {
+        transform: rotate(0);
+        transition: var(--nav-transition-timing);
+    }
+    .rotateBeforeLink {
+        transform: rotate(90deg);
+        transition: var(--nav-transition-timing);
+    }
+    .rotateAfterLink {
+        transform: rotate(0);
+        transition: var(--nav-transition-timing);
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    background-color: #6BA9B4;
+  }
+}
+@media screen and (min-width: 321px) {
+  body {
+    background-color: green;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+    background-color: red;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+    background-color: blue;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+      body {
+    background-color: yellow;
+  }
+}
+

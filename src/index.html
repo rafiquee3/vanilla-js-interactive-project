@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Js</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="js/bundle.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <div class="menu-site-link">
+        <a class="site-link" href="/">
+          <span class="site-logo"><img src="images/logo_icon.png" width="70px" alt="Title logo"/></span>
+          <span class="site-title">Title</span>
+        </a>
+      </div>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navbarMenu" id="navMenuToggleBttn">
+        <img src="images/menu.png" class="icon">
+      </button>
+      <div class="menu-wrapper hidden" role="menu" id="navbarMenu" aria-labelledby="navMenuToggleBttn">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <button class="menu-link" data-list-id="nested-list-1a" aria-expanded="false" 
+    aria-controls="nested-list-1a" id="navBttn1">
+              <div class="text">● Inner</div>
+              <div class="direction-indicator">▲</div>
+            </button>
+            <div class="innerList nestedLevel1 hidden" id="nested-list-1a" role="menu"
+    aria-labelledby="navBttn1">
+              <ul class="inner-menu-list">
+                <li class="nested-menu-item" data-level="1"><a class="sub-menu-link" href="/gallery">⨀ Gallery</a></li>
+                <li class="nested-menu-item" data-level="1"><a class="sub-menu-link" href="/">⨀ Index</a></li>
+                <li class="nested-menu-item">
+                  <a class="sub-menu-link" data-list-id="nested-list-2a" aria-expanded="false" aria-controls="nested-list-2a" id="nestedLink2a" aria-disabled="true">
+                    <div class="direction-indicator">▶</div> link A
+                  </a>
+                  <div class="innerList nestedLevel2 hidden" id="nested-list-2a" role="menu" aria-labelledby="nestedLink2a">
+                    <ul class="inner-menu-list">
+                      <li class="nested-menu-item" data-level="2"><a class="sub-menu-link" href="#">⨀ link A</a></li>
+                      <li class="nested-menu-item" data-level="2"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div> 
+          </li>
+          <li class="menu-item">
+            <button class="menu-link" data-list-id="nested-list-1b" aria-expanded="false" 
+    aria-controls="nested-list-1b" id="navBttn2">
+              <div class="text">● Link 2</div>
+              <div class="direction-indicator">▲</div>
+            </button>
+            <div class="innerList nestedLevel1 hidden" id="nested-list-1b" role="menu"
+    aria-labelledby="navBttn2">
+              <ul class="inner-menu-list">
+                <li class="nested-menu-item" data-level="1"><a class="sub-menu-link" href="#">⨀ link Y</a></li>
+                <li class="nested-menu-item" data-level="1"><a class="sub-menu-link" href="#">⨀ link U</a></li>
+                <li class="nested-menu-item">
+                  <a class="sub-menu-link" data-list-id="nested-list-2b" aria-expanded="false" aria-controls="nested-list-2b" id="nestedLink2b" aria-disabled="true">
+                    <div class="direction-indicator">▶</div> link A
+                  </a>
+                  <div class="innerList nestedLevel2 hidden" id="nested-list-2b" role="menu" aria-labelledby="nestedLink2b">
+                    <ul class="inner-menu-list">
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link B</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nested-menu-item">
+                  <a class="sub-menu-link" data-list-id="nested-list-2c" aria-controls="nested-list-2c" aria-expanded="false" id="nestedLink2c" aria-disabled="true">
+                    <div class="direction-indicator">▶</div> link A
+                  </a>
+                  <div class="innerList nestedLevel2 hidden" id="nested-list-2c" role="menu" aria-labelledby="nestedLink2c">
+                    <ul class="inner-menu-list">
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link Z</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link X</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nested-menu-item">
+                  <a class="sub-menu-link" data-list-id="nested-list-2d" aria-expanded="false" aria-controls="nested-list-2d" id="nestedLink2d" aria-disabled="true">
+                    <div class="direction-indicator">▶</div> link A
+                  </a>
+                  <div class="innerList nestedLevel2 hidden" id="nested-list-2d" role="menu" aria-labelledby="nestedLink2d">
+                    <ul class="inner-menu-list">
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link M</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link N</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div> 
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="/gallery">■ Gallery</a>
+          </li>
+          <li class="menu-item">
+            <button class="menu-link" data-list-id="nested-list-1c" aria-expanded="false" 
+    aria-controls="nested-list-1c" id="navBttn3">
+              <div class="text">● Inner</div>
+              <div class="direction-indicator">▲</div>
+            </button>
+            <div class="innerList nestedLevel1 hidden" id="nested-list-1c" role="menu"
+    aria-labelledby="navBttn3">
+              <ul class="inner-menu-list">
+                <li class="nested-menu-item">
+                  <a class="sub-menu-link" data-list-id="nested-list-2e" aria-expanded="false" aria-controls="nested-list-2e" id="nestedLink2e" aria-disabled="true">
+                    <div class="direction-indicator">▶</div> link A
+                  </a>
+                  <div class="innerList nestedLevel2 hidden" id="nested-list-2e" role="menu" aria-labelledby="nestedLink2e">
+                    <ul class="inner-menu-list">
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link A</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                      <li class="nested-menu-item"><a class="sub-menu-link" href="#">⨀ link E</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nested-menu-item" data-level="1"><a class="sub-menu-link" href="#">⨀ link Z</a></li>
+                <li class="nested-menu-item" data-level="1"><a class="sub-menu-link" href="#">⨀ link C</a></li>
+              </ul>
+            </div> 
+          </li>
+         <li class="menu-item">
+            <a class="menu-link" href="/form">■ Form</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main >
+    <div class="main-cnt"></div>
+  </main>
+  <footer>
+      <div class="footer-container">
+          <div class="footer-column explore">
+            <div class="content-wrapper">
+              <h3>Explore</h3>
+              <nav aria-label="Quick Links">
+                  <ul>
+                      <li><a href="/about">About Us</a></li>
+                      <li><a href="/services">Services</a></li>
+                      <li><a href="/blog">Blog</a></li>
+                  </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="footer-column support">
+            <div class="content-wrapper">
+              <h3>Support</h3>
+              <nav aria-label="Support Links">
+                  <ul>
+                      <li><a href="/contact">Contact</a></li>
+                      <li><a href="/faq">FAQ</a></li>
+                      <li><a href="/privacy">Privacy Policy</a></li>
+                  </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="footer-column connect">
+            <div class="content-wrapper">
+              <h3>Connect</h3>
+              <address>
+                  <p>123 street name</p>
+                  <p>City, State Number</p>
+                  <p>Email: <a href="mailto:info@yourdomain.com">email@address.com</a></p>
+              </address>
+              <div class="social-links">
+                  <a href="#"><img src="images/icon-x.svg" width="40px" alt="X icon"></a>
+                  <a href="#"><img src="images/icon-linkedin.svg" alt="LinkedIn icon" width="40px"></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-brand">
+              <p>&copy; 2025 Title. All rights reserved.</p>
+          </div>
+      </div>
+  </footer>
+</body>
+</html>

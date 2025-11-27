@@ -1,0 +1,43 @@
+<form id="logistics-form" class="app-form">
+    <fieldset>
+        <legend>Delivery Address</legend>
+        <div class="form-group">
+            <label for="streetAddress">Street Address *</label>
+            <input type="text" id="streetAddress" name="streetAddress" 
+                    value="" required minlength="5" placeholder="e.g., 12 Rue de la Liberté">
+            <span class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="city">City *</label>
+            <input type="text" id="city" name="city" value="" required>
+            <span class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="zipCode">Zip/Postal Code *</label>
+            <input type="number" id="zipCode" name="zipCode" value="" required pattern="[0-9]{5}" maxlength="5">
+            <span class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country *</label>
+            <select id="country" name="country" required>
+                <option value="">Select a country</option>
+                <option value="FR">France</option>
+                <option value="DE">Germany</option>
+                <option value="UK">United Kingdom</option>
+            </select>
+            <span class="error-message"></span>
+        </div>
+        
+        <div class="form-group">
+            <label for="notes">Delivery Notes (Optional)</label>
+            <textarea id="notes" name="notes" rows="3"></textarea>
+            <span class="error-message"></span>
+        </div>
+            <div class="form-actions">
+            <button type="submit" class="btn-primary">Proceed to Payment</button>
+        </div>
+    </fieldset>
+</form>

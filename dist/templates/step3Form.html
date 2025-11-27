@@ -1,0 +1,45 @@
+<form id="preferences-form" class="app-form">
+    <fieldset>
+        <legend>Change Password</legend>
+
+        <div class="form-group">
+            <label for="newPassword">New Password *</label>
+            <div class="password-wraper">
+                <input type="password" id="newPassword" name="newPassword" required minlength="8" placeholder="Must be at least 8 characters">
+                <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+                    <img src="images/show_pass.png" width="30px" alt="Show password icon">
+                </button>
+            </div>
+            <span class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password *</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <span class="error-message"></span>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Privacy Settings</legend>
+        <div class="form-group">
+            <p>Data Sharing Preference *</p>
+            <div class="radio-group">
+                <input type="radio" id="shareDataYes" name="dataSharing" value="yes" required>
+                <label for="shareDataYes">Share anonymized data</label>
+                <input type="radio" id="shareDataNo" name="dataSharing" value="no">
+                <label for="shareDataNo">Do not share any data</label>
+                <input type="radio" id="shareDataNo1" name="dataSharing" value="ss">
+                <label for="shareDataNo1">Do not share any data</label>
+            </div>
+            <span class="error-message"></span>
+        </div>
+        
+        <div class="form-group">
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">Subscribe to our monthly newsletter</label>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn-primary">Save Preferences</button>
+        </div>
+    </fieldset>
+</form>
