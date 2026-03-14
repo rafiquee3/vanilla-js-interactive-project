@@ -16,7 +16,8 @@
     "cp:images": "cp -r ./src/images ./dist",
     "cp:html": "cp ./src/index.html ./dist",
     "cp:templates": "cp -r ./src/templates ./dist",
-    "start": "npm-run-all --parallel sass cp:images cp:html cp:templates serve jsbuild watch:html watch:template"
+    "start": "npm-run-all --parallel sass cp:images cp:html cp:templates serve jsbuild watch:html watch:template",
+    "build": "sass src/scss/style.scss dist/css/style.min.css --style=compressed && esbuild src/js/app.js --bundle --outfile=dist/js/bundle.js && cp -r ./src/images ./dist && cp ./src/index.html ./dist && cp -r ./src/templates ./dist"
   },
   "devDependencies": {
     "esbuild": "0.25.10",
